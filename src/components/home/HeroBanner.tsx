@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import banner1 from '@/assets/banner-1.jpg';
 import banner2 from '@/assets/banner-2.jpg';
 import banner3 from '@/assets/banner-3.jpg';
+import banner4 from '@/assets/banner-4.png';
+import banner5 from '@/assets/banner-5.png';
+import banner6 from '@/assets/banner-6.png';
 
 const banners = [
   {
@@ -30,6 +33,30 @@ const banners = [
     subtitle: 'Akses perpustakaan digital terlengkap di Indonesia',
     cta: 'Pelajari Lebih',
     link: '/about'
+  },
+  {
+    id: 4,
+    image: banner4,
+    title: 'Meet The Founders',
+    subtitle: 'Nathannael Wijaya & Idris Iskandar - Visionary minds behind PARAGRAF',
+    cta: 'Tentang Kami',
+    link: '/about'
+  },
+  {
+    id: 5,
+    image: banner5,
+    title: 'Ayah Itu Apa?',
+    subtitle: 'Coming Soon 2026 - Kisah hangat tentang makna keluarga',
+    cta: 'Lihat Detail',
+    link: '/products'
+  },
+  {
+    id: 6,
+    image: banner6,
+    title: 'Petualangan Ke Dunia Lain',
+    subtitle: 'Coming Soon 2026 - Petualangan fantasi yang memukau',
+    cta: 'Lihat Detail',
+    link: '/products'
   }
 ];
 
