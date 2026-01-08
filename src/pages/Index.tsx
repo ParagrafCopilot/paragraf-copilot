@@ -1,7 +1,7 @@
 import { Layout } from '@/components/layout/Layout';
 import { HeroBanner } from '@/components/home/HeroBanner';
 import { BookCarousel } from '@/components/home/BookCarousel';
-import { getBestsellers, getNewArrivals, books } from '@/lib/books-data';
+import { getBestsellers, getNewArrivals, books } from '@/lib/products-data';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Award, Users, Globe } from 'lucide-react';
