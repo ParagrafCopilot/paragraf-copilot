@@ -17,6 +17,9 @@ export interface Product {
   publishedDate: string;
 }
 
+// Alias for backwards compatibility
+export type Book = Product;
+
 // Book images
 import book1 from '@/assets/books/book-1.jpg';
 import book2 from '@/assets/books/book-2.jpg';
@@ -421,6 +424,7 @@ export const products: Product[] = [
 ];
 
 export const getBooks = () => products.filter(p => p.type === 'book');
+export const books = getBooks(); // Alias for backwards compatibility
 export const getOtherProducts = () => products.filter(p => p.type !== 'book');
 export const getBestsellers = () => products.filter(p => p.isBestseller);
 export const getNewArrivals = () => {

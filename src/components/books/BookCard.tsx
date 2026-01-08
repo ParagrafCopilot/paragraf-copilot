@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Star } from 'lucide-react';
-import { Book, formatPrice } from '@/lib/books-data';
+import { Book, formatPrice } from '@/lib/products-data';
 
 interface BookCardProps {
   book: Book;

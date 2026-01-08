@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Book, formatPrice } from '@/lib/books-data';
+import { Book, formatPrice } from '@/lib/products-data';
 import { Star } from 'lucide-react';
 
 interface BookCarouselProps {
