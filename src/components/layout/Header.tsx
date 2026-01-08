@@ -33,13 +33,13 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 md:gap-3 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <img 
               src={logoIcon} 
               alt="Paragraf" 
-              className="h-8 md:h-10 w-auto dark:invert transition-transform group-hover:scale-105" 
+              className="h-7 sm:h-8 md:h-10 w-auto dark:invert transition-transform group-hover:scale-105" 
             />
-            <span className="logo-text text-lg md:text-xl text-foreground tracking-[0.3em] font-light hidden sm:block">
+            <span className="logo-text text-base sm:text-lg md:text-xl text-foreground tracking-[0.2em] sm:tracking-[0.3em] font-light">
               PARAGRAF
             </span>
           </Link>

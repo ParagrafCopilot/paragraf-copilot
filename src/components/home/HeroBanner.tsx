@@ -81,7 +81,7 @@ export function HeroBanner() {
 
   return (
     <section 
-      className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden"
+      className="relative w-full h-[60vh] sm:h-[65vh] md:h-[70vh] overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -93,12 +93,12 @@ export function HeroBanner() {
         {banners.map((banner) => (
           <div
             key={banner.id}
-            className="min-w-full h-full relative"
+            className="min-w-full h-full relative flex-shrink-0"
           >
             <img
               src={banner.image}
               alt={banner.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
             
