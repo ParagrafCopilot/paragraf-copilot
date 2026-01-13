@@ -81,7 +81,7 @@ export function HeroBanner() {
 
   return (
     <section 
-      className="relative w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[21/9] max-h-[80vh] overflow-hidden"
+      className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden bg-muted"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -98,9 +98,9 @@ export function HeroBanner() {
             <img
               src={banner.image}
               alt={banner.title}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain sm:object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
             
             {/* Content */}
             <div className="absolute inset-0 flex items-center">
