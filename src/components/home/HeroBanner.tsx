@@ -81,31 +81,32 @@ export function HeroBanner() {
 
   return (
     <section 
-      className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden bg-muted"
+      className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] bg-muted"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      {/* Slides */}
-      <div 
-        className="flex h-full transition-transform duration-700 ease-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {banners.map((banner) => (
+      {/* Slides Container - Single slide visible at a time */}
+      <div className="relative w-full h-full overflow-hidden">
+        {banners.map((banner, index) => (
           <div
             key={banner.id}
-            className="min-w-full h-full relative flex-shrink-0"
+            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+              index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
           >
             <img
               src={banner.image}
               alt={banner.title}
-              className="w-full h-full object-contain sm:object-cover object-center"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
             
             {/* Content */}
-            <div className="absolute inset-0 flex items-center">
+            <div className={`absolute inset-0 flex items-center transition-all duration-700 ${
+              index === currentIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
               <div className="container mx-auto px-4 md:px-6">
-                <div className="max-w-xl space-y-4 md:space-y-6 animate-fade-in">
+                <div className="max-w-xl space-y-4 md:space-y-6">
                   <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                     {banner.title}
                   </h1>
